@@ -1,31 +1,52 @@
-* DONE Emacs?
+* 목차                                                                  :TOC:
+- [[#emacs][Emacs?]]
+- [[#왜-emacs][왜 Emacs]]
+- [[#장점과-단점][장점과 단점]]
+  - [[#장점][장점]]
+  - [[#단점][단점]]
+- [[#spacemacs-는-독인가][spacemacs 는 독인가?]]
+- [[#레퍼런스][레퍼런스]]
+- [[#음][음...]]
+- [[#x][X]]
+  - [[#capslock-to-control][Capslock to control]]
+  - [[#종료][종료]]
+  - [[#파일][파일]]
+  - [[#이동][이동]]
+  - [[#편집][편집]]
+  - [[#편집-cua-mode][편집 cua-mode]]
+  - [[#검색--바꾸기][검색 / 바꾸기]]
+  - [[#모드라인][모드라인]]
+  - [[#윈도우][윈도우]]
+  - [[#버퍼][버퍼]]
 
-| <l>   |               |                               |          |
-| 년도  | Editor        |                               |          |
-|-------+---------------+-------------------------------+----------|
-| 1962  | TECO          | Dan Murphy                    |          |
-| 1969  | ed            | Ken Thompson                  |          |
-| 1970s | E             | Fred Wright, Stanford AI Lab  |          |
-| 1970s | MAC/MACS      | Stanford AI Lab               | TECO, E  |
-| 1970s | EMACS         | Stanford AI Lab               | MAC/MACS |
-| 1976  | VI            | Bill Joy                      | ed       |
-| 1981  | Gosling Emacs | James Gosling, 상용, Mocklisp | EMACS    |
-| 1985  | GNU Emacs     | Richard Stallman, GPL, elisp  | EMACS    |
-| 1988  | VIM           | Bram Moolenaar                | vi       |
+* Emacs?
+  | <l>   |               |                               |          |
+  | 년도  | Editor        |                               |          |
+  |-------+---------------+-------------------------------+----------|
+  | 1962  | TECO          | Dan Murphy                    |          |
+  | 1969  | ed            | Ken Thompson                  |          |
+  | 1970s | E             | Fred Wright, Stanford AI Lab  |          |
+  | 1970s | MAC/MACS      | Stanford AI Lab               | TECO, E  |
+  | 1970s | EMACS         | Stanford AI Lab               | MAC/MACS |
+  | 1976  | VI            | Bill Joy                      | ed       |
+  | 1981  | Gosling Emacs | James Gosling, 상용, Mocklisp | EMACS    |
+  | 1985  | GNU Emacs     | Richard Stallman, GPL, elisp  | EMACS    |
+  | 1988  | VIM           | Bram Moolenaar                | vi       |
 
-1970년데, MIT AI Lab에서는 =ed= 처럼 명령 / 편집 / 보기 모드를 지원하는 =TECO(Tape Editor and COrrector)= 를 주로 쓰었다.
-Stanford AI Lab에서는 =E= 를 쓰고 있었는데, =Richard Stallman= 는 그것을 보고 영감을 받아, MIT로 돌아와 ~Control-R~ 로 편집/보기 모드를 합쳐버린다.
-=E= 에서 random-access editing 이 가능한 기능을 =TECO= 을 수정, 유명해졌고, 이는 곧 =MAC / MACS(macro)= 로 불리게 되었다.
-=Guy Steele= 과 함께, =Richard Stallman= 는 여러가지 보안 후 =EMACS(Editing MACroS / E with MACroS)= 를 만들었다.
-여러가지 변종이 나타나고, 기존 =TECO macro= 대신 =lisp= 를 매크로로 쓰기 시작하였다.
-=James Gosling= 은 unix에서 돌아가는 =Gosling Emac= 를 만들었고, =Richard Stallman= 은 자유소프트웨어(https://en.wikipedia.org/wiki/Free_software) GNU Emacs를 만들었다.
+  1970년데, MIT AI Lab에서는 =ed= 처럼 명령 / 편집 / 보기 모드를 지원하는 =TECO(Tape Editor and COrrector)= 를 주로 쓰었다.
+  Stanford AI Lab에서는 =E= 를 쓰고 있었는데, =Richard Stallman= 는 그것을 보고 영감을 받아, MIT로 돌아와 ~Control-R~ 로 편집/보기 모드를 합쳐버린다.
+  =E= 에서 random-access editing 이 가능한 기능을 =TECO= 을 수정, 유명해졌고, 이는 곧 =MAC / MACS(macro)= 로 불리게 되었다.
+  =Guy Steele= 과 함께, =Richard Stallman= 는 여러가지 보안 후 =EMACS(Editing MACroS / E with MACroS)= 를 만들었다.
+  여러가지 변종이 나타나고, 기존 =TECO macro= 대신 =lisp= 를 매크로로 쓰기 시작하였다.
+  =James Gosling= 은 unix에서 돌아가는 =Gosling Emac= 를 만들었고, =Richard Stallman= 은 자유소프트웨어(https://en.wikipedia.org/wiki/Free_software) GNU Emacs를 만들었다.
 
-- https://en.wikipedia.org/wiki/Emacs
-  
+  - https://en.wikipedia.org/wiki/Emacs
+
 * TODO 왜 Emacs
 
 Unlike other editors which encourage users to stay with the default as much as they can, Emacs encourages users to customize and extend Emacs as much as they can. - https://tuhdo.github.io/emacs-tutor3.html
    - https://netpyoung.github.io/external/textmate_gone_open_source
+
 * TODO 장점과 단점
   vi와 비교?
 vim 가볍다(설치 간단, 로딩 빠름.). 디폴트로 깔려있다., 초기 외울게 적음.
@@ -52,17 +73,16 @@ l
      - 어떻게 끄지?
      - Ctrl 압박.
      - bash keybind
-     - 복사/붙여넣기 - cua-mode
+     - 복사/붙여넣기
    - 셋팅
      - Elisp
      - 한글 셋팅.
      - http://spacemacs.org/
 
-
 * spacemacs 는 독인가?
-  
+
 * 레퍼런스
-- https://github.com/alhassy/ElispCheatSheet     
+- https://github.com/alhassy/ElispCheatSheet
 
 * TODO 음...
   - https://tuhdo.github.io/emacs-for-proglang.html
@@ -76,3 +96,76 @@ l
 
 
 
+* X
+emacs -Q
+-Q, --quick
+Equivalent to "-q --no-site-file --no-splash".
+
+-nw, --no-window-system
+Tell Emacs not to use its special interface to X. If you use this switch when invoking Emacs from an xterm(1) window, display is done in that window.
+
+
+** Capslock to control
+   다른 의견도 있으나(http://ergoemacs.org/emacs/swap_CapsLock_Ctrl.html) Capslock을 Ctrl키로 바꾸도록 한다.
+
+** 종료
+   | 모드     | 함수                       | 커맨드  |
+   |----------+----------------------------+---------|
+   | 종료하기 | save-buffers-kill-terminal | C-x C-c |
+
+** 파일
+   | 모드              | 함수           | 커맨드  |
+   |-------------------+----------------+---------|
+   | 파일 열기         | find-file      | C-x C-f |
+   | 파일 저장         | save-buffer    | C-x C-s |
+   | 읽기모드 / 해지   | read-only-mode | C-x C-q |
+   | 다른이름으로 저장 | write-file     | C-x C-w |
+
+** TODO 이동
+    |-----------+-------------------+-----|
+    | 위        | previous-line     | C-p |
+    | 아레      | next-line         | C-n |
+    | 앞        | forward-char      | C-f |
+    | 뒤        | backward-char     | C-b |
+    | 앞 - 단어 | forward-word      | M-f |
+    | 뒤 - 단어 | backward-word     | M-f |
+    | 앞 - 줄   | beginning-of-line | C-a |
+    | 뒤 - 줄   | end-of-line       | C-e |
+    | 앞 - 문장 | forward-sentence  | M-a |
+    | 뒤 - 문장 | forward-sentence  | M-e |
+
+
+** TODO 편집
+C-<SPC> markset
+	<DEL>        Delete the character just before the cursor
+	C-d   	     Delete the next character after the cursor
+
+	M-<DEL>      Kill the word immediately before the cursor
+	M-d	     Kill the next word after the cursor
+
+	C-k	     Kill from the cursor position to end of line
+	M-k	     Kill to the end of the current sentence
+
+** TODO 편집 cua-mode
+
+** TODO 검색 / 바꾸기
+
+** TODO 모드라인
+   |    | 의미                  |
+   |----+-----------------------|
+   | -- | 일반                  |
+   | ** | 버퍼 수정됨           |
+   | %% | 읽기모드, 일반        |
+   | %* | 읽기모드, 버퍼 수정됨 |
+
+** TODO 윈도우
+** TODO 버퍼
+   	C-x C-b   List buffers
+
+
+the X (eXtend) command.  This comes in two flavors:
+
+	C-x	Character eXtend.  Followed by one character.
+	M-x	Named command eXtend.  Followed by a long name.
+
+delete-char C-d
